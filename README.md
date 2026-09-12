@@ -2,7 +2,9 @@
 
 > Pega tu video de YouTube y déjalo sonar una y otra vez en un reproductor con estilo retro-moderno.
 
-![Cassette XOXO Preview](https://i.pinimg.com/1200x/7e/21/8c/7e218c0b3206dcd89f72f0ff5f1a0422.jpg)
+<p align="center">
+  <img src="https://i.pinimg.com/1200x/7e/21/8c/7e218c0b3206dcd89f72f0ff5f1a0422.jpg" alt="Cassette XOXO Preview" width="450" style="border-radius: 12px;">
+</p>
 
 ## ✨ Características
 
