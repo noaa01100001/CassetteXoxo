@@ -7,23 +7,24 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="cassette-style.css">
 </head>
 <body>
 
+<!-- Logo -->
 <header class="site-header">
   <img src="https://i.pinimg.com/1200x/7e/21/8c/7e218c0b3206dcd89f72f0ff5f1a0422.jpg" alt="Painted cassette tapes" class="header-img">
+  <!-- Logo superpuesto sobre la imagen -->
+  <div class="hero-overlay">
+    <div class="blob"></div>
+    <h1>Cassette<span> </span>XOXO</h1>
+  </div>
 </header>
 
 <div class="topbar">
+  <p class="subtitle" data-i18n="subtitle">pega tu video y déjalo sonar una y otra vez</p>
   <button class="icon-btn" id="langBtn" onclick="toggleLang()">EN</button>
   <button class="icon-btn" id="themeBtn" onclick="toggleTheme()">🌙</button>
-</div>
-
-<div class="hero">
-  <div class="blob"></div>
-  <h1>Cassette<span> </span>XOXO</h1>
-  <p class="subtitle" data-i18n="subtitle">pega tu video y déjalo sonar una y otra vez</p>
 </div>
 
 <div class="panel">
@@ -51,15 +52,20 @@
 
 <p class="hint" id="hintText">
   Pega el link completo o solo el ID del video. Una vez cargado, se repite automáticamente sin límite.
+  <br>
   Toca el botón <strong>1x</strong> para ver el video a doble velocidad.
 </p>
 
 <footer class="site-footer">
-  <span data-i18n="madeBy">made by</span>
-  <a href="https://github.com/noaa01100001" target="_blank" rel="noopener noreferrer">@noaa01100001</a>
+  <div class="footer-content">
+    <span data-i18n="madeBy">made by</span>
+    <a href="https://github.com/noaa01100001" target="_blank" rel="noopener noreferrer">@noaa01100001</a>
+    <span class="footer-divider">•</span>
+    <span data-i18n="footerRights">v1.0 © 2026. All rights reserved.</span>
+  </div>
 </footer>
 
-<script src="script.js"></script>
+<script src="cassette-script.js"></script>
 <script src="https://www.youtube.com/iframe_api"></script>
 
 </body>

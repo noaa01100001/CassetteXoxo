@@ -20,7 +20,7 @@ const dict = {
         restart: "⏮ restart",
         pause: "⏯ pause",
         play: "⏯ play",
-        hint: 'Paste the full link or just the video ID. Once loaded, it loops automatically with no limit. Tap the <strong>1x</strong> button to watch at double speed.',
+        hint: 'Paste the full link or just the video ID. Once loaded, it loops automatically with no limit.<br> Tap the <strong>1x</strong> button to watch at double speed.',
         alertInvalid: "Couldn't recognize a valid video ID. Check the link.",
         langToggle: "ES",
         themeLight: "🌙",
@@ -113,13 +113,21 @@ function onPlayerStateChange(event) {
 function loadVideo() {
     const raw = document.getElementById('urlInput').value;
     const id = extractId(raw);
+
     if (!id) {
         alert(dict[currentLang].alertInvalid);
         return;
     }
-    if (player && player.loadPlaylist) {
-        player.loadPlaylist({ listType: 'playlist', playlist: id, index: 0, loop: 1 });
+
+    // Verificamos si el reproductor de YouTube ya se cargó
+    if (!player || typeof player.loadPlaylist !== 'function') {
+        alert(currentLang === 'es'
+            ? "El reproductor se está cargando, espera un segundo e intenta de nuevo."
+            : "The player is still loading, wait a second and try again.");
+        return;
     }
+
+    player.loadPlaylist({ listType: 'playlist', playlist: id, index: 0, loop: 1 });
 }
 
 function restart() {
